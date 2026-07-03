@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Dataset</title>
+    <style>
+        table.data {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table.data, table.data th, table.data td {
+            border: 1px solid black;
+        }
+        table.data th, table.data td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Top 5 Rows of Dataset</h2>
+    {{ head|safe }}
+
+    <h2>Missing Values Per Column</h2>
+    {{ missing|safe }}
+
+    <h2>Dataset Shape</h2>
+    <p>{{ shape_info }}</p>
+
+    <a href="/home">Back to Home</a>
+</body>
+</html>
